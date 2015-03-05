@@ -21,7 +21,10 @@
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, strong) UIPageViewController *pageController;
 @property (nonatomic, strong) UIView *navigationView;
-@property (nonatomic, strong) NSArray *buttonText;
+@property (nonatomic, strong) NSArray *buttonTitles;
 @property (strong, nonatomic) UIColor *backgroundTintColor;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) UIButton *leftBarButton;
+@property (strong, nonatomic) UIButton *rightBarButton;
 
 @end

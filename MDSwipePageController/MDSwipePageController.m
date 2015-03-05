@@ -1,8 +1,8 @@
 //
 //  MDSwipePageController.m
 //
-//  Created by 秦昱博 on 15/1/26.
-//  Copyright (c) 2015年 Richard Kim. All rights reserved.
+//  Created by Qin Yubo on 15/1/26.
+//  Copyright (c) 2015年 Qin Yubo. All rights reserved.
 //
 //  Inspired by RKSwipeBetweenViewControllers, Richard Kim
 //
@@ -37,8 +37,11 @@
 @synthesize panGestureRecognizer;
 @synthesize pageController;
 @synthesize navigationView;
-@synthesize buttonText;
+@synthesize buttonTitles;
 @synthesize backgroundTintColor;
+@synthesize title;
+@synthesize leftBarButton;
+@synthesize rightBarButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,8 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setupSegmentButtons
-{
+- (void)setupSegmentButtons {
     navigationView = [[UIView alloc]initWithFrame:CGRectMake(0,0,[UIScreen mainScreen].bounds.size.width,self.navigationBar.frame.size.height + HEIGHT)];
     navigationView.backgroundColor = TINT_COLOR;
     navigationView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
@@ -76,8 +78,8 @@
     NSInteger numControllers = [viewControllerArray count];
     
     // 设置标题
-    if (!buttonText) {
-        buttonText = [[NSArray alloc]initWithObjects: @"first",@"second",@"third",@"etc",@"etc",@"etc",@"etc",nil];
+    if (!buttonTitles) {
+        buttonTitles = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"etc",@"etc",@"etc",@"etc",nil];
     }
     
     for (int i = 0; i<numControllers; i++) {
@@ -88,13 +90,40 @@
         button.tag = i;
         button.backgroundColor = TINT_COLOR;
         
-        [button setTitle:[buttonText objectAtIndex:i] forState:UIControlStateNormal]; //%%%buttontitle
+        [button setTitle:[buttonTitles objectAtIndex:i] forState:UIControlStateNormal]; //%%%buttontitle
         // 按钮字号
         [button.titleLabel setFont:[UIFont systemFontOfSize:BUTTON_FONT_SIZE]];
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     [pageController.view addSubview:navigationView];
+    
+    // 设置标题
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 30, self.view.frame.size.width - 60, 30)];
+    if (title == nil) {
+        titleLabel.text = @"";
+    } else {
+        titleLabel.text = title;
+    }
+    //titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20.0];
+    [navigationView addSubview:titleLabel];
+    
+    // 设置左右按钮
+    
+    if (leftBarButton != nil) {
+        [leftBarButton setFrame:CGRectMake(10, 25, 40, 40)];
+        [leftBarButton setTintColor:[UIColor whiteColor]];
+        [navigationView addSubview:leftBarButton];
+    }
+    
+    if (rightBarButton != nil) {
+        [rightBarButton setFrame:CGRectMake(self.view.frame.size.width - 50, 25, 40, 40)];
+        [rightBarButton setTintColor:[UIColor whiteColor]];
+        [navigationView addSubview:rightBarButton];
+    }
     
     [self setupSelector];
 }
@@ -133,7 +162,7 @@
 
 //%%% this allows us to get information back from the scrollview, namely the coordinate information that we can link to the selection bar.
 - (void)syncScrollView {
-    for (UIView* view in pageController.view.subviews){
+    for (UIView* view in pageController.view.subviews) {
         if([view isKindOfClass:[UIScrollView class]]) {
             pageScrollView = (UIScrollView *)view;
             pageScrollView.delegate = self;
@@ -149,8 +178,7 @@
 //but it also has to animate the other pages to make it feel like you're crossing a 2d expansion,
 //so there's a loop that shows every view controller in the array up to the one you selected
 //eg: if you're on page 1 and you click tab 3, then it shows you page 2 and then page 3
--(void)tapSegmentButtonAction:(UIButton *)button
-{
+- (void)tapSegmentButtonAction:(UIButton *)button {
     NSInteger tempIndex = currentPageIndex;
     
     __weak typeof(self) weakSelf = self;
@@ -185,7 +213,7 @@
 
 //%%% makes sure the nav bar is always aware of what page you're on
 //in reference to the array of view controllers you gave
--(void)updateCurrentPageIndex:(int)newIndex {
+- (void)updateCurrentPageIndex:(int)newIndex {
     currentPageIndex = newIndex;
 }
 

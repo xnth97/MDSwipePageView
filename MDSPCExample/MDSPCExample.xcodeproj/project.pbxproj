@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E910F2B01A7CF5AC007DA3B8 /* MDSwipePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */; };
 		E9AB1EA31A7BBC120003B4A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EA21A7BBC120003B4A5 /* main.m */; };
 		E9AB1EA61A7BBC120003B4A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EA51A7BBC120003B4A5 /* AppDelegate.m */; };
 		E9AB1EAE1A7BBC120003B4A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AB1EAD1A7BBC120003B4A5 /* Images.xcassets */; };
 		E9AB1EB11A7BBC120003B4A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9AB1EAF1A7BBC120003B4A5 /* LaunchScreen.xib */; };
 		E9AB1EBD1A7BBC120003B4A5 /* MDSPCExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EBC1A7BBC120003B4A5 /* MDSPCExampleTests.m */; };
-		E9AB1EC91A7BBC270003B4A5 /* MDSwipePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EC81A7BBC270003B4A5 /* MDSwipePageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E910F2AE1A7CF5AC007DA3B8 /* MDSwipePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSwipePageController.h; sourceTree = "<group>"; };
+		E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSwipePageController.m; sourceTree = "<group>"; };
 		E9AB1E9D1A7BBC120003B4A5 /* MDSPCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDSPCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AB1EA11A7BBC120003B4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AB1EA21A7BBC120003B4A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		E9AB1EB61A7BBC120003B4A5 /* MDSPCExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDSPCExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AB1EBB1A7BBC120003B4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AB1EBC1A7BBC120003B4A5 /* MDSPCExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDSPCExampleTests.m; sourceTree = "<group>"; };
-		E9AB1EC71A7BBC270003B4A5 /* MDSwipePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSwipePageController.h; sourceTree = "<group>"; };
-		E9AB1EC81A7BBC270003B4A5 /* MDSwipePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSwipePageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageController */ = {
+			isa = PBXGroup;
+			children = (
+				E910F2AE1A7CF5AC007DA3B8 /* MDSwipePageController.h */,
+				E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */,
+			);
+			name = MDSwipePageController;
+			path = ../../MDSwipePageController;
+			sourceTree = "<group>";
+		};
 		E9AB1E941A7BBC120003B4A5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +89,7 @@
 		E9AB1E9F1A7BBC120003B4A5 /* MDSPCExample */ = {
 			isa = PBXGroup;
 			children = (
-				E9AB1EC61A7BBC270003B4A5 /* MDSwipePageController */,
+				E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageController */,
 				E9AB1EA41A7BBC120003B4A5 /* AppDelegate.h */,
 				E9AB1EA51A7BBC120003B4A5 /* AppDelegate.m */,
 				E9AB1EAD1A7BBC120003B4A5 /* Images.xcassets */,
@@ -113,15 +123,6 @@
 				E9AB1EBB1A7BBC120003B4A5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E9AB1EC61A7BBC270003B4A5 /* MDSwipePageController */ = {
-			isa = PBXGroup;
-			children = (
-				E9AB1EC71A7BBC270003B4A5 /* MDSwipePageController.h */,
-				E9AB1EC81A7BBC270003B4A5 /* MDSwipePageController.m */,
-			);
-			path = MDSwipePageController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AB1EC91A7BBC270003B4A5 /* MDSwipePageController.m in Sources */,
+				E910F2B01A7CF5AC007DA3B8 /* MDSwipePageController.m in Sources */,
 				E9AB1EA61A7BBC120003B4A5 /* AppDelegate.m in Sources */,
 				E9AB1EA31A7BBC120003B4A5 /* main.m in Sources */,
 			);
@@ -410,6 +411,7 @@
 				E9AB1EC21A7BBC120003B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9AB1EC31A7BBC120003B4A5 /* Build configuration list for PBXNativeTarget "MDSPCExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +420,7 @@
 				E9AB1EC51A7BBC120003B4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

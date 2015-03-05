@@ -30,19 +30,33 @@
     UIViewController *demo4 = [[UIViewController alloc]init];
     demo1.view.backgroundColor = [UIColor whiteColor];
     demo2.view.backgroundColor = [UIColor greenColor];
-    demo3.view.backgroundColor = [UIColor grayColor];
+    demo3.view.backgroundColor = [UIColor redColor];
     demo4.view.backgroundColor = [UIColor orangeColor];
     
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 94, demo1.view.frame.size.width, demo1.view.frame.size.height - 94)];
     [demo1.view addSubview:tableView];
     
     [mdSwipeController.viewControllerArray addObjectsFromArray:@[demo1, demo2, demo3, demo4]];
-    mdSwipeController.buttonTitles = @[@"天大要闻", @"视点观察", @"缤纷北洋", @"自主挖掘"];
+    mdSwipeController.buttonTitles = @[@"title", @"title", @"title", @"title"];
     mdSwipeController.backgroundTintColor = [UIColor colorWithRed:0/255.0f green:138/255.0f blue:244/255.0f alpha:1.0f];
-    self.window.rootViewController = mdSwipeController;
+    mdSwipeController.title = @"Title";
     
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [leftBtn addTarget:self action:@selector(testFunc) forControlEvents:UIControlEventTouchUpInside];
+    mdSwipeController.leftBarButton = leftBtn;
+    
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [rightBtn addTarget:self action:@selector(testFunc) forControlEvents:UIControlEventTouchUpInside];
+    mdSwipeController.rightBarButton = rightBtn;
+    
+    self.window.rootViewController = mdSwipeController;
+
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)testFunc {
+    NSLog(@"test");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
