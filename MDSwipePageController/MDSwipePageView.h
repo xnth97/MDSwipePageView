@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MDSwipePageViewDelegate <NSObject>
+
+- (void)pageChangedToIndex:(NSUInteger)index;
+- (void)pageWillChangeToIndex:(NSUInteger)index;
+
+@end
+
 @interface MDSwipePageView : UIView<UIScrollViewAccessibilityDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSArray *titlesForSubPageViews;
 @property (strong, nonatomic) NSArray *subPageViews;
 @property (strong, nonatomic) UIColor *mainColor;
+
+@property (assign, nonatomic) id<MDSwipePageViewDelegate> delegate;
 
 @end

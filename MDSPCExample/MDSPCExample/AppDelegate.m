@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MDSwipePageView.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<MDSwipePageViewDelegate>
 
 @end
 
@@ -32,8 +32,9 @@
     UIViewController *mdSwipeController = [[UIViewController alloc] init];
     [mdSwipeController.view setFrame:[UIScreen mainScreen].bounds];
     MDSwipePageView *pageView = [[MDSwipePageView alloc] initWithFrame:mdSwipeController.view.frame];
+    pageView.delegate = self;
     pageView.subPageViews = @[demo1.view, demo2.view, demo3.view, demo4.view];
-    pageView.mainColor = [UIColor redColor];
+    pageView.mainColor = [UIColor colorWithRed:0.039 green:0.467 blue:1.000 alpha:1.000];
     pageView.titlesForSubPageViews = @[@"View 1", @"View 2", @"View 3", @"View 4"];
     [mdSwipeController.view addSubview:pageView];
     
@@ -41,6 +42,14 @@
 
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)pageChangedToIndex:(NSUInteger)index {
+    NSLog(@"Page changed to: %ld", index);
+}
+
+- (void)pageWillChangeToIndex:(NSUInteger)index {
+    NSLog(@"Page will change: %ld", index);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

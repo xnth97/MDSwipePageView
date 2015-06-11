@@ -1,6 +1,6 @@
-# MDSwipePageController
+# MDSwipePageView
 
-A Material Design style page controller based on a single View.
+A Material Design style page view.
 
 ![](example.png)
 
