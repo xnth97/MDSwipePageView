@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E910F2B01A7CF5AC007DA3B8 /* MDSwipePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */; };
+		E97F7A3E1B29EBF400746E0B /* MDSwipePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E97F7A3D1B29EBF400746E0B /* MDSwipePageView.m */; };
 		E9AB1EA31A7BBC120003B4A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EA21A7BBC120003B4A5 /* main.m */; };
 		E9AB1EA61A7BBC120003B4A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB1EA51A7BBC120003B4A5 /* AppDelegate.m */; };
 		E9AB1EAE1A7BBC120003B4A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AB1EAD1A7BBC120003B4A5 /* Images.xcassets */; };
@@ -26,8 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E910F2AE1A7CF5AC007DA3B8 /* MDSwipePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSwipePageController.h; sourceTree = "<group>"; };
-		E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSwipePageController.m; sourceTree = "<group>"; };
+		E97F7A3C1B29EBF400746E0B /* MDSwipePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSwipePageView.h; sourceTree = "<group>"; };
+		E97F7A3D1B29EBF400746E0B /* MDSwipePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSwipePageView.m; sourceTree = "<group>"; };
 		E9AB1E9D1A7BBC120003B4A5 /* MDSPCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDSPCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AB1EA11A7BBC120003B4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AB1EA21A7BBC120003B4A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 		E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageController */ = {
 			isa = PBXGroup;
 			children = (
-				E910F2AE1A7CF5AC007DA3B8 /* MDSwipePageController.h */,
-				E910F2AF1A7CF5AC007DA3B8 /* MDSwipePageController.m */,
+				E97F7A3C1B29EBF400746E0B /* MDSwipePageView.h */,
+				E97F7A3D1B29EBF400746E0B /* MDSwipePageView.m */,
 			);
 			name = MDSwipePageController;
 			path = ../../MDSwipePageController;
@@ -224,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E910F2B01A7CF5AC007DA3B8 /* MDSwipePageController.m in Sources */,
+				E97F7A3E1B29EBF400746E0B /* MDSwipePageView.m in Sources */,
 				E9AB1EA61A7BBC120003B4A5 /* AppDelegate.m in Sources */,
 				E9AB1EA31A7BBC120003B4A5 /* main.m in Sources */,
 			);

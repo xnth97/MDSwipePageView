@@ -1,6 +1,6 @@
 # MDSwipePageController
 
-This is a Material Design style page controller, inspired by RKSwipeBetweenViewControllers, Richard Kim.
+A Material Design style page controller based on a single View.
 
 ![](example.png)
 

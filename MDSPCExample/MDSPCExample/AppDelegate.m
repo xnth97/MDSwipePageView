@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MDSwipePageController.h"
+#import "MDSwipePageView.h"
 
 @interface AppDelegate ()
 
@@ -20,43 +20,27 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
-    MDSwipePageController *mdSwipeController = [[MDSwipePageController alloc]initWithRootViewController:pageController];
-    
     UIViewController *demo1 = [[UIViewController alloc]init];
     UIViewController *demo2 = [[UIViewController alloc]init];
     UIViewController *demo3 = [[UIViewController alloc]init];
     UIViewController *demo4 = [[UIViewController alloc]init];
     demo1.view.backgroundColor = [UIColor whiteColor];
     demo2.view.backgroundColor = [UIColor greenColor];
-    demo3.view.backgroundColor = [UIColor redColor];
+    demo3.view.backgroundColor = [UIColor blueColor];
     demo4.view.backgroundColor = [UIColor orangeColor];
     
-    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 94, demo1.view.frame.size.width, demo1.view.frame.size.height - 94)];
-    [demo1.view addSubview:tableView];
-    
-    [mdSwipeController.viewControllerArray addObjectsFromArray:@[demo1, demo2, demo3, demo4]];
-    mdSwipeController.buttonTitles = @[@"title", @"title", @"title", @"title"];
-    mdSwipeController.backgroundTintColor = [UIColor colorWithRed:0/255.0f green:138/255.0f blue:244/255.0f alpha:1.0f];
-    mdSwipeController.title = @"Title";
-    
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [leftBtn addTarget:self action:@selector(testFunc) forControlEvents:UIControlEventTouchUpInside];
-    mdSwipeController.leftBarButton = leftBtn;
-    
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [rightBtn addTarget:self action:@selector(testFunc) forControlEvents:UIControlEventTouchUpInside];
-    mdSwipeController.rightBarButton = rightBtn;
+    UIViewController *mdSwipeController = [[UIViewController alloc] init];
+    [mdSwipeController.view setFrame:[UIScreen mainScreen].bounds];
+    MDSwipePageView *pageView = [[MDSwipePageView alloc] initWithFrame:mdSwipeController.view.frame];
+    pageView.subPageViews = @[demo1.view, demo2.view, demo3.view, demo4.view];
+    pageView.mainColor = [UIColor redColor];
+    pageView.titlesForSubPageViews = @[@"View 1", @"View 2", @"View 3", @"View 4"];
+    [mdSwipeController.view addSubview:pageView];
     
     self.window.rootViewController = mdSwipeController;
 
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (void)testFunc {
-    NSLog(@"test");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
