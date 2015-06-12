@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MDSPCExample.xcodeproj">
+      location = "self:MDSwipePageViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

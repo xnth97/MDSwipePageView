@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MDSPCExample.xcscheme</key>
+		<key>MDSwipePageViewDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E9AB1E9C1A7BBC120003B4A5</key>
+		<key>E9B7BBBC1B2A873300069FD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9AB1EB51A7BBC120003B4A5</key>
+		<key>E9B7BBD51B2A873300069FD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

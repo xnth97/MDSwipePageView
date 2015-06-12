@@ -1,15 +1,14 @@
 //
 //  AppDelegate.m
-//  MDSPCExample
+//  MDSwipePageViewDemo
 //
-//  Created by 秦昱博 on 15/1/30.
-//  Copyright (c) 2015年 TWT Studio. All rights reserved.
+//  Created by 秦昱博 on 15/6/12.
+//  Copyright (c) 2015年 Qin Yubo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "MDSwipePageView.h"
 
-@interface AppDelegate ()<MDSwipePageViewDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -18,30 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    UIViewController *demo1 = [[UIViewController alloc]init];
-    UIViewController *demo2 = [[UIViewController alloc]init];
-    UIViewController *demo3 = [[UIViewController alloc]init];
-    UIViewController *demo4 = [[UIViewController alloc]init];
-    demo1.view.backgroundColor = [UIColor whiteColor];
-    demo2.view.backgroundColor = [UIColor greenColor];
-    demo3.view.backgroundColor = [UIColor blueColor];
-    demo4.view.backgroundColor = [UIColor orangeColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:71/255.0f green:156/255.0f blue:27/255.0f alpha:1.0f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
-    UIViewController *mdSwipeController = [[UIViewController alloc] init];
-    mdSwipeController.view.backgroundColor = [UIColor whiteColor];
-    MDSwipePageView *pageView = [[MDSwipePageView alloc] initWithFrame:mdSwipeController.view.frame];
-    pageView.delegate = self;
-    pageView.subPageViews = @[demo1.view, demo2.view, demo3.view, demo4.view];
-    pageView.mainColor = [UIColor colorWithRed:0.039 green:0.467 blue:1.000 alpha:1.000];
-    pageView.titlesForSubPageViews = @[@"View 1", @"View 2", @"View 3", @"View 4"];
-    pageView.titleHeight = 46;
-    [mdSwipeController.view addSubview:pageView];
-    
-    self.window.rootViewController = mdSwipeController;
-
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -65,12 +45,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-#pragma MDSwipePageView delegate
-
-- (void)swipePageView:(MDSwipePageView *)pageView pageChangedToIndex:(NSUInteger)index {
-    NSLog(@"Page changed to: %ld", index);
 }
 
 @end

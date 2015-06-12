@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9AB1E9C1A7BBC120003B4A5"
-               BuildableName = "MDSPCExample.app"
-               BlueprintName = "MDSPCExample"
-               ReferencedContainer = "container:MDSPCExample.xcodeproj">
+               BlueprintIdentifier = "E9B7BBBC1B2A873300069FD6"
+               BuildableName = "MDSwipePageViewDemo.app"
+               BlueprintName = "MDSwipePageViewDemo"
+               ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9AB1EB51A7BBC120003B4A5"
-               BuildableName = "MDSPCExampleTests.xctest"
-               BlueprintName = "MDSPCExampleTests"
-               ReferencedContainer = "container:MDSPCExample.xcodeproj">
+               BlueprintIdentifier = "E9B7BBD51B2A873300069FD6"
+               BuildableName = "MDSwipePageViewDemoTests.xctest"
+               BlueprintName = "MDSwipePageViewDemoTests"
+               ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9AB1EB51A7BBC120003B4A5"
-               BuildableName = "MDSPCExampleTests.xctest"
-               BlueprintName = "MDSPCExampleTests"
-               ReferencedContainer = "container:MDSPCExample.xcodeproj">
+               BlueprintIdentifier = "E9B7BBD51B2A873300069FD6"
+               BuildableName = "MDSwipePageViewDemoTests.xctest"
+               BlueprintName = "MDSwipePageViewDemoTests"
+               ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9AB1E9C1A7BBC120003B4A5"
-            BuildableName = "MDSPCExample.app"
-            BlueprintName = "MDSPCExample"
-            ReferencedContainer = "container:MDSPCExample.xcodeproj">
+            BlueprintIdentifier = "E9B7BBBC1B2A873300069FD6"
+            BuildableName = "MDSwipePageViewDemo.app"
+            BlueprintName = "MDSwipePageViewDemo"
+            ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9AB1E9C1A7BBC120003B4A5"
-            BuildableName = "MDSPCExample.app"
-            BlueprintName = "MDSPCExample"
-            ReferencedContainer = "container:MDSPCExample.xcodeproj">
+            BlueprintIdentifier = "E9B7BBBC1B2A873300069FD6"
+            BuildableName = "MDSwipePageViewDemo.app"
+            BlueprintName = "MDSwipePageViewDemo"
+            ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9AB1E9C1A7BBC120003B4A5"
-            BuildableName = "MDSPCExample.app"
-            BlueprintName = "MDSPCExample"
-            ReferencedContainer = "container:MDSPCExample.xcodeproj">
+            BlueprintIdentifier = "E9B7BBBC1B2A873300069FD6"
+            BuildableName = "MDSwipePageViewDemo.app"
+            BlueprintName = "MDSwipePageViewDemo"
+            ReferencedContainer = "container:MDSwipePageViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
