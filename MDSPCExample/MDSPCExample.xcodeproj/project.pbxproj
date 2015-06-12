@@ -58,13 +58,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageController */ = {
+		E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageView */ = {
 			isa = PBXGroup;
 			children = (
 				E97F7A3C1B29EBF400746E0B /* MDSwipePageView.h */,
 				E97F7A3D1B29EBF400746E0B /* MDSwipePageView.m */,
 			);
-			name = MDSwipePageController;
+			name = MDSwipePageView;
 			path = ../../MDSwipePageController;
 			sourceTree = "<group>";
 		};
@@ -89,7 +89,7 @@
 		E9AB1E9F1A7BBC120003B4A5 /* MDSPCExample */ = {
 			isa = PBXGroup;
 			children = (
-				E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageController */,
+				E910F2AD1A7CF5AC007DA3B8 /* MDSwipePageView */,
 				E9AB1EA41A7BBC120003B4A5 /* AppDelegate.h */,
 				E9AB1EA51A7BBC120003B4A5 /* AppDelegate.m */,
 				E9AB1EAD1A7BBC120003B4A5 /* Images.xcassets */,

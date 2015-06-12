@@ -1,6 +1,6 @@
 # MDSwipePageView
 
-A Material Design style page view.
+A Material Design style page view with good customizability.
 
 ![](example.png)
 

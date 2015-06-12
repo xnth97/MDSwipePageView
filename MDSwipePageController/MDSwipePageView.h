@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MDSwipePageView;
+
 @protocol MDSwipePageViewDelegate <NSObject>
 
-- (void)pageChangedToIndex:(NSUInteger)index;
-- (void)pageWillChangeToIndex:(NSUInteger)index;
+- (void)swipePageView:(MDSwipePageView *)pageView pageChangedToIndex:(NSUInteger)index;
 
 @end
 
@@ -21,6 +22,13 @@
 @property (strong, nonatomic) NSArray *subPageViews;
 @property (strong, nonatomic) UIColor *mainColor;
 
+@property (strong, nonatomic) UIColor *selectedTitleColor;
+@property (strong, nonatomic) UIColor *unselectedTitleColor;
+@property (strong, nonatomic) UIColor *selectorColor;
+@property (nonatomic) float titleHeight;
+
 @property (assign, nonatomic) id<MDSwipePageViewDelegate> delegate;
+
+- (NSUInteger)currentPage;
 
 @end
