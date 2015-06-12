@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FEBA962A-1349-445B-84DB-8B6C85556109</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MDSwipePageViewDemo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A458EA2F402EB9018301EF3FE9D5A8F16D34960A</key>
 		<string>https://github.com/xnth97/MDSwipePageView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Example/MDSwipePageViewDemo.xcodeproj</string>
+	<string>Example/MDSwipePageViewDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A458EA2F402EB9018301EF3FE9D5A8F16D34960A</key>

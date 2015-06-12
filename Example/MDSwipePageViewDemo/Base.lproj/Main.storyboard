@@ -54,5 +54,31 @@
             </objects>
             <point key="canvasLocation" x="705" y="427"/>
         </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="fDx-LU-snc">
+            <objects>
+                <viewController id="ZMg-WY-o5k" customClass="SubViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mor-y4-rNG"/>
+                        <viewControllerLayoutGuide type="bottom" id="z24-q0-ZZH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9kU-MH-Mk5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAG-tC-s3p">
+                                <rect key="frame" x="103" y="155" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ko-wl-M5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518" y="427"/>
+        </scene>
     </scenes>
 </document>
